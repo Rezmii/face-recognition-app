@@ -1,11 +1,17 @@
 import { Button, Input } from "@chakra-ui/react";
 import { useRef } from "react";
 
-const InputSection = () => {
+interface Props {
+  setImgUrl: (url: string) => void;
+}
+
+const InputSection = ({ setImgUrl }: Props) => {
   const urlRef = useRef<HTMLInputElement>(null);
+
   const handleInput = () => {
     if (urlRef.current) {
-      console.log(urlRef.current.value);
+      setImgUrl(urlRef.current.value);
+      urlRef.current.value = "";
     }
   };
   return (

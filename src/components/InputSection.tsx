@@ -10,10 +10,12 @@ const InputSection = ({ setImgUrl }: Props) => {
 
   const handleInput = () => {
     if (urlRef.current) {
-      setImgUrl(urlRef.current.value);
+      const url = urlRef.current.value;
+      setImgUrl(url);
       urlRef.current.value = "";
     }
   };
+
   return (
     <>
       <Input

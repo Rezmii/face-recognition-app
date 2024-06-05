@@ -1,4 +1,4 @@
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { HStack, Text, VStack } from "@chakra-ui/react";
 import InputSection from "./InputSection";
 import ImageSection from "./ImageSection";
 import { useState } from "react";
